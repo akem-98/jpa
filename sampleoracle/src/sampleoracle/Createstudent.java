@@ -12,13 +12,13 @@ public class Createstudent {
 		  entitymanager.getTransaction().begin();
 		  
 		  
-		  //removing a row
-			student student= entitymanager.find(student.class, 102);
-			entitymanager.remove(student);
+//		  //removing a row
+//			student stu= entitymanager.find(student.class, 102);
+//			entitymanager.remove(stu);
 			
 			//updating a column
-			student student= entitymanager.find(student.class, 101);
-			student.setNum(1848);
+			student stu= entitymanager.find(student.class, 101);
+			stu.setNum(1848);
 		  
 		//creating a row
 		//student stu = new student();
@@ -27,7 +27,7 @@ public class Createstudent {
 		  //stu.setFee(255000);
 		  //stu.setNum(5000);
 		  
-		  entitymanager.persist(student);
+		  entitymanager.persist(stu);
 		  entitymanager.getTransaction().commit();
 		  
 		  entitymanager.close();
